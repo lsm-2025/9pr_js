@@ -1,0 +1,1303 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    transition: .2s;
+    scroll-padding: 100px;
+    user-select: none;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mu-80 {
+    margin-top: 80px;
+}
+
+:root {
+    --accent-color: #e32d30;
+    --hover-color-btn: #c0282b;
+    --banner-bg-color: #000;
+    --catalog-card-color: #f1f1f1;
+    --btn-order: #EA431B;
+}
+
+/* fonts */
+
+@font-face {
+    font-family: 'Mont';
+    src: url(../media/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Over';
+    src: url(../media/fonts/Overpass-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: 'Rob';
+    src: url(../media/fonts/Roboto-VariableFont_wdth\,wght.ttf);
+}
+
+/* header */
+
+header {
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 10px 0 rgba(60, 60, 60, 0.25);
+}
+
+.header {
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.header .logo {
+    width: 177px;
+    height: 38px;
+}
+
+button {
+    padding: 14px 32px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    border: none;
+    background: var(--accent-color);
+    color: #fff;
+    font-family: 'Rob';
+    font-weight: 500;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+button:hover {
+    background: var(--hover-color-btn);
+}
+
+input[type=search] {
+    padding: 16px 13px;
+    border-radius: 8px;
+    border: 1px solid #e4e7ec;
+    width: 689px;
+    margin-right: 28px;
+}
+
+input[type=search]:focus {
+    border: 1px solid #333;
+}
+
+input[type=search]::placeholder {
+    font-size: 14px;
+    color: #1d2939;
+    opacity: 0.4;
+}
+
+.autoreg_btns {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 15px;
+}
+
+.btns_acc {
+    display: flex;
+    align-items: center;
+    gap: 17px;
+}
+
+.btns_acc img:hover {
+    transform: scale(1.1);
+}
+
+/* banner */
+
+.banner {
+    width: 100%;
+    background: var(--banner-bg-color);
+    height: 660px;
+}
+
+.banner_block {
+    position: relative;
+}
+
+.banner_bg {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.banner_text_block {
+    height: 660px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+}
+
+.banner_text_block h1 {
+    color: #fff;
+    width: 887px;
+    font-family: 'Mont';
+    font-weight: 500;
+    font-size: 64px;
+    margin-bottom: 17px;
+    vertical-align: middle;
+}
+
+.banner_text_block h3 {
+    color: #fff;
+    font-family: 'Mont';
+    font-weight: 500;
+    font-size: 24px;
+    margin-bottom: 85px;
+}
+
+/* catalog */
+
+h2 {
+    font-family: 'Rob';
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.catalog_items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 63px;
+    position: relative;
+    overflow: hidden;
+}
+
+.cards_cat {
+    display: flex;
+    gap: 68px;
+    padding: 0 40px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.cat_card {
+    padding: 13px;
+    background: var(--catalog-card-color);
+    width: 278.38px;
+    border-radius: 22.08px;
+    cursor: pointer;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+    flex-shrink: 0;
+}
+
+.cat_card:hover {
+    transform: scale(1.01);
+}
+
+.img {
+    border-radius: 15px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.cat_card .price {
+    font-family: 'Rob';
+    font-size: 24px;
+    padding-top: 13px;
+    color: var(--hover-color-btn);
+    font-weight: 500;
+}
+
+.cat_card .category {
+    padding-top: 15px;
+    padding-bottom: 6px;
+    font-weight: 400;
+    font-size: 12px;
+    font-family: 'Mont';
+    color: #000;
+}
+
+.cat_card .nameProduct {
+    font-family: 'Mont';
+    font-weight: 700;
+    width: 252px;
+    font-size: 20px;
+    padding-bottom: 25px;
+}
+
+.img .love_cat {
+    position: absolute;
+    top: 13px;
+    right: 9px;
+}
+
+.rate {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 3px;
+    padding-bottom: 9px;
+}
+
+.rate .rating {
+    font-family: 'Mont';
+    font-weight: 400;
+    font-size: 12px;
+    text-align: right;
+    color: #000;
+}
+
+.addBasket {
+    width: 100%;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    font-weight: 400;
+    font-family: 'Mont';
+}
+
+.cat_card button {
+    padding: 9px 84px;
+    background: var(--btn-order);
+}
+
+.cat_card button:hover {
+    background: var(--hover-color-btn);
+}
+
+.more {
+    background: none;
+    border: none;
+    font-family: 'Mont';
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    width: 100%;
+    padding-top: 55px;
+}
+
+/* preim */
+
+.preim h2 {
+    padding-bottom: 20px;
+}
+
+.preim_card {
+    width: 427px;
+    padding-left: 34px;
+    border: 1px solid #000;
+    padding-top: 34px;
+    border-radius: 30px;
+    padding-right: 39px;
+    transition: .2s ease-in-out;
+}
+
+.preim_card h6 {
+    font-family: 'Mont';
+    color: #000;
+    font-size: 64px;
+    font-weight: 400;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 60px;
+    text-align: center;
+    vertical-align: middle;
+    padding-right: 60px;
+    border: 1px solid #000;
+    width: 159px;
+    border-radius: 15px;
+    line-height: 100%;
+}
+
+.preim h3 {
+    font-family: 'Mont';
+    vertical-align: middle;
+    font-size: 24px;
+    color: #000;
+    font-weight: 700;
+    padding-top: 39px;
+    padding-bottom: 16px;
+    line-height: 100%;
+}
+
+.preim p {
+    color: #000;
+    font-size: 20px;
+    font-family: 'Mont';
+    font-weight: 300;
+    vertical-align: top;
+    padding-bottom: 39px;
+    line-height: 100%;
+    min-height: 119px;
+}
+
+.preim_cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    row-gap: 59px;
+}
+
+.preim_card:hover {
+    background: var(--hover-color-btn);
+    border: 1px solid var(--hover-color-btn);
+}
+
+.preim_card:hover h6 {
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.preim_card:hover h3 {
+    color: #fff;
+}
+
+.preim_card:hover p {
+    color: #fff;
+}
+
+/* musicians__block */
+
+.mus_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.mus_card:hover {
+    transform: scale(1.02);
+}
+
+.mus_card .mus_sphere {
+    font-family: 'Rob';
+    font-size: 12px;
+    font-weight: 300;
+    vertical-align: middle;
+    color: #000;
+    padding-top: 8px;
+    padding-bottom: 9px;
+}
+
+.mus_card .mus_name {
+    font-family: 'Rob';
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--btn-order);
+}
+
+.mus_items {
+    display: flex;
+    align-items: center;
+    gap: 97px;
+    padding-top: 50px;
+}
+
+.cards_mus {
+    display: flex;
+    align-items: center;
+    gap: 52px;
+}
+
+/* about */
+
+span {
+    color: var(--hover-color-btn);
+}
+
+.text_about {
+    font-family: 'Mont';
+    font-size: 20px;
+    width: 723px;
+    font-weight: 400;
+}
+
+.about_content_block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+/* brands */
+
+.brand__item {
+    width: 230px;
+    height: 109px;
+    border: 1px solid #767676;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+    &:hover {
+        transform: scale(1.01);
+    }
+
+    &:hover img {
+        filter: grayscale(0);
+    }
+}
+
+
+.brand__item img {
+    filter: grayscale(1);
+}
+
+.brands_items {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    row-gap: 18px;
+    column-gap: 20px;
+    width: 100%;
+    padding-top: 20px;
+}
+
+/* footer */
+
+.footer_block {
+    padding-top: 101px;
+}
+
+.footer_desc {
+    padding: 43px 0 45px 0;
+    font-family: 'Over';
+    color: #ffffff;
+    opacity: 0.6;
+    font-size: 15px;
+    font-weight: 200;
+    width: 330px;
+}
+
+.socials_line {
+    display: flex;
+    gap: 13px;
+}
+
+.socials_line img {
+    cursor: pointer;
+    transition: .5s;
+
+    &:hover {
+        transform: rotate(360deg);
+    }
+}
+
+.mid_content h3,
+.right_content h3 {
+    font-family: 'Over';
+    color: #fff;
+    font-weight: 700;
+    font-size: 20px;
+    padding-bottom: 43px;
+}
+
+.mid_content nav {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.right_content nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.mid_content nav a,
+.right_content nav a {
+    color: #fff;
+    opacity: 0.5;
+    font-family: 'Over';
+    font-weight: 400;
+    font-size: 17px;
+
+    &:hover {
+        opacity: 0.8;
+        transform: translateX(5px);
+    }
+}
+
+.footer_block_main {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.line_orange {
+    width: 100%;
+    height: 2px;
+    background: var(--btn-order);
+    margin-top: 85px;
+}
+
+.policy {
+    font-family: 'Over';
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.afferts {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.afferts p {
+    font-family: 'Over';
+    font-weight: 400;
+    font-size: 15px;
+    color: #fff;
+    opacity: 0.5;
+}
+
+.over_down_footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 32px;
+    padding-bottom: 33px;
+}
+
+/* Модальное окно (фон) */
+.modal {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    /* Остается на месте */
+    z-index: 1;
+    /* Расположение поля */
+    left: 0;
+    top: 99px;
+    width: 100%;
+    /* Полная ширина */
+    height: 90%;
+    /* Полная высота */
+    overflow: auto;
+    /* Включить прокрутку при необходимости */
+    background-color: rgb(0, 0, 0);
+    /* Резервный цвет */
+    background-color: rgba(0, 0, 0, 0.51);
+    /* Черный с непрозрачностью */
+    opacity: 0;
+    transition: opacity .4s ease-in-out;
+}
+
+/* Модальное содержимое */
+.modal-content {
+    background-color: rgba(255, 255, 255, 1);
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 72px;
+    width: 100%;
+    z-index: 999;
+    transform: translatey(-100px);
+    transition: transform .4s ease-in-out;
+}
+
+.modal-text {
+    max-width: 1480px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.modal-text-grid {
+    display: grid;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 230px);
+    column-gap: 20px;
+    row-gap: 15px;
+    height: fit-content;
+    grid-auto-flow: column;
+}
+
+.modal-text-grid p {
+    font-family: 'Rob';
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    width: 230px;
+}
+
+.modal.active {
+    opacity: 1;
+}
+
+.modal.active .modal-content {
+    transform: scale(1);
+}
+
+/* form_registration */
+
+.registration form {
+    padding: 68px 50px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    font-family: 'Mont';
+}
+
+.registration form input[type=text],
+.registration form input[type=password],
+.registration form input[type=submit],
+.profile_data__update input {
+    width: 100%;
+    border-radius: 5px;
+    font-family: 'Mont';
+}
+
+.registration form input[type=text],
+.registration form input[type=password],
+.profile_data__update input {
+    padding: 18px 20px;
+    font-size: 16px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    border: 1px solid transparent;
+    color: #000;
+}
+
+.registration form input[type=text]::placeholder,
+.registration form input[type=password]::placeholder,
+.profile_data__update input::placeholder {
+    color: #767676;
+}
+
+.registration form input[type=submit] {
+    width: 100%;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #fff;
+    background: #EA431B;
+    border: none;
+}
+
+.registration form label {
+    padding-top: 12px;
+    font-size: 14px;
+}
+
+.registration {
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 700px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.buttons_log_reg {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.buttons_log_reg .log,
+.buttons_log_reg .reg {
+    padding: 26px 0 26px 0;
+    width: 50%;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    color: #000;
+}
+
+.buttons_log_reg .log {
+    color: rgba(0, 0, 0, 0.5);
+    background: #cecece;
+}
+
+/* account */
+
+/* Style tab links */
+.tablink {
+    background-color: #fff;
+    color: #000;
+    float: left;
+    cursor: pointer;
+    padding: 14px 20px;
+    font-size: 16px;
+    font-family: 'Over';
+    font-weight: 500;
+    width: 220px;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.25);
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.tablink:hover {
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.25);
+    background: none;
+    transform: scale(1.02);
+}
+
+.account_btns {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 20px;
+}
+
+.update_profile_data {
+    padding: 30px 50px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 605px;
+}
+
+.account_content {
+    display: flex;
+    gap: 30px;
+    align-items: start;
+}
+
+.main_content__account h1 {
+    padding-top: 62px;
+    padding-bottom: 80px;
+    font-family: 'Over';
+    font-size: 72px;
+    font-weight: 400;
+    vertical-align: top;
+}
+
+.profile_data__update {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+
+.profile_data__update input {
+    border-radius: 10px;
+    padding: 12px 21px;
+    font-size: 16px;
+}
+
+.profile_data__update button {
+    margin-top: 32px;
+    font-weight: 400;
+}
+
+.profile_data__update button:hover {
+    transform: scale(1.015);
+    filter: brightness(0.95);
+}
+
+.update_profile_data h3 {
+    font-family: 'Over';
+    font-size: 26px;
+    font-weight: 400;
+    padding-bottom: 50px;
+}
+
+.obr_svyaz {
+    padding: 30px 50px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.obr_svyaz h3 {
+    font-family: 'Over';
+    font-size: 26px;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+.obr_svyaz p {
+    font-family: 'Rob';
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0%;
+    padding-bottom: 15px;
+}
+
+.logos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logos img {
+    cursor: pointer;
+}
+
+.logos img:hover {
+    transform: scale(1.05);
+}
+
+.socials {
+    padding: 30px 50px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.socials h3 {
+    font-family: 'Over';
+    font-size: 26px;
+    font-weight: 400;
+    padding-bottom: 35px;
+}
+
+.profile_data {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 28px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    width: 605px;
+}
+
+.orders_block {
+    padding: 30px 50px;
+    box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+}
+
+.name_all {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.order_item {
+    padding: 15px;
+    border-radius: 22px;
+    box-shadow: 0 0 14px 0 rgba(0, 0, 0, 0.25);
+    background: #f1f1f1;
+    width: 266px;
+    cursor: pointer;
+}
+
+.order_item:hover {
+    transform: scale(1.015);
+}
+
+.order_item .order_date {
+    font-family: "Mont";
+    font-size: 14px;
+    font-weight: 600;
+    padding-bottom: 12px;
+}
+
+.order_item .items {
+    font-family: 'Mont';
+    font-size: 12px;
+    font-weight: 400;
+    padding-bottom: 16px;
+}
+
+.imgs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 22px;
+}
+
+.status {
+    padding: 6px 0;
+    background: #ADB200;
+    color: #fff;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Mont";
+    font-weight: 600;
+}
+
+.order_list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+    padding-top: 20px;
+}
+
+.name_all h3 {
+    font-family: 'Over';
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.name_all a {
+    font-family: "Rob";
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--hover-color-btn);
+}
+
+#exit-btn {
+    background: none;
+    color: #c00000;
+    padding: 0;
+    padding-top: 16px;
+}
+
+.order_list .cat_card {
+    transform: scale(0.899);
+}
+
+.order_list .cat_card:hover {
+    transform: scale(0.91);
+}
+
+.content__main_acc {
+    min-height: 527px;
+}
+
+/* Модальное окно (фон) */
+.modal-acc-order {
+    display: none;
+    /* Скрыто по умолчанию */
+    position: fixed;
+    /* Остается на месте */
+    z-index: 1;
+    /* Расположение поля */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Полная ширина */
+    height: 100%;
+    /* Полная высота */
+    overflow: auto;
+    /* Включить прокрутку при необходимости */
+    background-color: rgb(0, 0, 0);
+    /* Резервный цвет */
+    background-color: rgba(0, 0, 0, 0.51);
+    opacity: 0;
+    /* Черный с непрозрачностью */
+    transition: opacity .4s ease-in-out;
+}
+
+/* Модальное содержимое */
+.modal-content-order {
+    background-color: rgba(255, 255, 255, 1);
+    margin: auto;
+    border-radius: 15px;
+    padding: 50px;
+    width: 800px;
+    z-index: 999;
+    opacity: 1;
+    transition: opacity .3s ease-in-out;
+}
+
+.modal-acc-order.active {
+    opacity: 1;
+}
+
+.modal-acc-order.active .modal-content-order {
+    transform: scale(1);
+}
+
+.title_close-btn h3 {
+    font-family: 'Mont';
+    font-size: 24px;
+    font-weight: 600;
+    color: #000;
+}
+
+.title_close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 48px;
+}
+
+.items_title {
+    font-family: 'Mont';
+    font-size: 18px;
+    font-weight: 500;
+    padding-bottom: 30px;
+}
+
+.order-item {
+    width: 100%;
+    background: #efefef;
+    box-shadow: 0 0 7px 0 rgba(0, 0, 0, 0.25);
+    padding: 8px 20px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.order-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-item img {
+    width: 80px;
+    height: 80px;
+}
+
+.order-item .title_item {
+    min-width: 191px;
+    max-width: 191px;
+    font-size: 14px;
+    font-family: 'Mont';
+    font-weight: 600;
+}
+
+.order-item .count_item {
+    min-width: 199px;
+    max-width: 199px;
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.order-item .count_item .title_count {
+    font-size: 14px;
+    font-family: 'Mont';
+    font-weight: 600;
+}
+
+.order-item .count_item .count_num {
+    font-size: 14px;
+    font-family: 'Mont';
+    font-weight: 500;
+}
+
+.order-item .price_item {
+    display: flex;
+    flex-direction: column;
+    gap: 29px;
+}
+
+.order-item .price_item .title_price {
+    font-size: 14px;
+    font-family: 'Mont';
+    font-weight: 600;
+}
+
+.order-item .price_item .price_num {
+    font-size: 14px;
+    font-family: 'Mont';
+    font-weight: 500;
+}
+
+.address {
+    font-size: 12px;
+    font-weight: 400;
+    font-family: 'Mont';
+    padding: 15px 0;
+}
+
+.line_order {
+    width: 100%;
+    height: 1px;
+    background: #cecece;
+    margin-bottom: 20px;
+}
+
+.total {
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.total .total_price .total-price-title {
+    font-size: 24px;
+    font-family: 'Mont';
+    font-weight: 600;
+    padding-bottom: 36px;
+}
+
+.total-price-count-delivery {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.total-price-count-delivery .total-count {
+    font-size: 24px;
+    font-family: 'Mont';
+    font-weight: 600;
+    color: var(--hover-color-btn);
+}
+
+.total-price-count-delivery .delivery-total {
+    font-family: 'Mont';
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.total-status {
+    display: flex;
+    flex-direction: column;
+    width: 251px;
+}
+
+.total-status .total-status-title {
+    font-size: 24px;
+    font-family: 'Mont';
+    font-weight: 600;
+    padding-bottom: 36px;
+}
+
+.status-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.status-btn .status {
+    width: 251px;
+}
+
+.status-btn input {
+    background: none;
+    border: none;
+    padding-top: 14px;
+    color: #8a0002;
+    font-size: 12px;
+    font-family: 'Mont';
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.faq {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 250px;
+    position: sticky;
+    top: 0;
+}
+
+.last_floor{
+    padding-bottom: 30px;
+}
+
+.faq_item {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 3px 5px 3px rgba(0, 0, 0, 0.25);
+    border-radius: 15px 15px 15px 15px;
+}
+
+.faq_head {
+    background-color: rgba(217, 217, 217, 0.74);
+    padding: 17px 23px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 22px;
+    width: 100%;
+    height: max-content;
+    cursor: pointer;
+}
+
+.faq_name {
+    color: #000;
+    font-size: 16px;
+    font-family: 'Over';
+    font-weight: 500;
+}
+
+.faq_btn {
+    color: #000;
+    transform: rotate(-90deg);
+    transition: .2s ease-in;
+}
+
+.faq_btn img{
+    width: 12px;
+    height: 12px;
+}
+
+.faq_head.active .faq_btn {
+    transform: rotate(90deg);
+}
+
+.faq_head.active {
+    transition: .3s ease-in;
+}
+
+.faq_content {
+    background: #fff;
+    border-radius: 0 0 15px 15px;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    transition: .3s ease-in;
+    opacity: 0;
+    font-family: 'Over';
+}
+
+.faq_text{
+    padding: 17px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.faq_text_p{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.name_catalog{
+    font-family: 'Over';
+    font-size: 24px;
+    font-weight: 700;
+    padding-bottom: 42px;
+}
+
+.catalog_section{
+    padding-top: 35px;
+}
+
+.search_filter{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search_filter input{
+    padding: 14px 10px;
+    background: none;
+    border-radius: 5px;
+    border: 1px solid #e4e7ec;
+    color: #777;
+    font-size: 16px;
+    font-family: 'Over';
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.faq_catalog{
+    display: flex;
+    gap: 30px;
+    height: 100%;
+}
